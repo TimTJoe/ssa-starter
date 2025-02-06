@@ -2,15 +2,20 @@
  require("dotenv").config()
  require("module-alias/register")
  const { drizzle } = require('drizzle-orm/libsql') ;
- const db = drizzle(process.env.DB_FILE || "file:./db/business.db")
+ const db = drizzle(process.env.DB_FILE || "file:./database/main.db")
  
  const app = express();
  
 // Middleware
 app.use(express.json());
 app.use((req,res, next)=>{
+  //add db to req object for site-wide access
   req.db = db
   next()
+})
+
+app.use("/", (req, res) => {
+  res.send("Hello world!")
 })
 
 // Routes

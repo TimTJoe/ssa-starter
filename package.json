@@ -1,5 +1,5 @@
 {
-  "name": "yb",
+  "name": "ssa-starter",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "timothy t. joe",
   "license": "ISC",
-  "description": "mini server-side version of yoloblee.com",
+  "description": "ssa-starter files with drizzle-orm and node-express",
   "dependencies": {
     "@libsql/client": "^0.14.0",
     "dotenv": "^16.4.5",
